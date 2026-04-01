@@ -79,9 +79,12 @@
 
     .fab-phone { display: none; }
 
+    /* ГЛАВНОЕ ФОТО: ТЕПЕРЬ ИСПОЛЬЗУЕТ ТВОЙ ФАЙЛ hero-bg.jpg */
     .hero {
       position: relative; min-height: 100dvh; display: flex; align-items: center; justify-content: center;
-      text-align: center; color: white; background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1920&q=80') center/cover;
+      text-align: center; color: white;
+      /* Временно стоит стоковая заглушка, пока ты не загрузишь hero-bg.jpg в GitHub */
+      background: url('hero-bg.jpg') center/cover, url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1920&q=80') center/cover;
       overflow: hidden;
     }
     .hero video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
@@ -138,14 +141,16 @@
     footer a { color: var(--accent); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
 
-    /* Крупные соцсети */
-    .social-links { display: flex; gap: 20px; margin-top: 20px; margin-bottom: 20px; }
+    /* Крупные соцсети и карты */
+    .social-links { display: flex; gap: 15px; margin-top: 20px; margin-bottom: 20px; flex-wrap: wrap; }
     .social-links a {
       display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px;
-      border-radius: 50%; color: white; text-decoration: none; transition: 0.3s; font-size: 30px;
+      border-radius: 50%; color: white; text-decoration: none; transition: 0.3s; font-size: 28px;
     }
     .social-links .vk { background: #0077FF; }
     .social-links .inst { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+    .social-links .twogis { background: #95C11F; font-weight: 700; font-size: 20px; }
+    .social-links .ya { background: #fc3f1d; font-weight: 700; font-size: 26px; }
     .social-links a:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(255,255,255,0.2); }
 
     iframe { width: 100%; height: 250px; border: none; border-radius: 12px; }
@@ -300,6 +305,11 @@
           </div>
         </div>
       </div>
+      
+      <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+        <a href="https://2gis.ru/saratov/search/%D1%83%20%D0%BC%D0%B0%D0%BC%D1%8B/firm/70000001110671664/46.022303%2C51.531758?m=46.034329%2C51.533488%2F10.42" class="btn btn-outline" target="_blank" rel="noopener">Читать в 2ГИС</a>
+        <a href="https://yandex.ru/maps/-/CPbCv26l" class="btn btn-outline" target="_blank" rel="noopener">Читать в Яндексе</a>
+      </div>
     </section>
 
     <section class="cta-bottom fade">
@@ -322,10 +332,12 @@
 
         <p style="margin: 15px 0;">✉️ asistaent2026@gmail.com</p>
         
-        <p style="margin-top: 25px; font-weight: 600; font-size: 18px; color: white;">Мы в социальных сетях:</p>
+        <p style="margin-top: 25px; font-weight: 600; font-size: 18px; color: white;">Мы в социальных сетях и на картах:</p>
         <div class="social-links">
           <a href="https://vk.com/umamy_saratov" target="_blank" rel="noopener" class="vk" title="ВКонтакте">VK</a>
           <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="inst" title="Instagram">📷</a>
+          <a href="https://2gis.ru/saratov/search/%D1%83%20%D0%BC%D0%B0%D0%BC%D1%8B/firm/70000001110671664/46.022303%2C51.531758?m=46.034329%2C51.533488%2F10.42" target="_blank" rel="noopener" class="twogis" title="Открыть в 2ГИС">2GIS</a>
+          <a href="https://yandex.ru/maps/-/CPbCv26l" target="_blank" rel="noopener" class="ya" title="Открыть на Яндекс Картах">Я</a>
         </div>
         
         <div class="legal-info">
